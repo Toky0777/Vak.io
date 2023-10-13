@@ -50,6 +50,7 @@ export default function Lecture() {
                 <Box sx={{ width: '90%' }}>
                     <LinearProgress variant="buffer" value={progress} valueBuffer={buffer} />
                 </Box>
+                
             </div>
         </div>
     </>

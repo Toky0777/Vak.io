@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import {Home} from "./pages/Home";
+import SeConnecter from "./pages/SeConnecter";
+import Accueil from './pages/Accueil';
+import Importer from './pages/Importer';
+import Lecture from './pages/Lecture';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='h-screen w-screen'>
+      {/* <Home/> */}
+      {/* <SeConnecter/> */}
+      {/* <Accueil/> */}
+      {/* <Importer/> */}
+      <Lecture/>
     </div>
   );
 }

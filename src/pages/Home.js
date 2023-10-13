@@ -2,6 +2,7 @@ import logo from '../image/logoVak.io.png';
 import fond from '../image/fond.jpg'
 import fond2 from '../image/fond2 - Copie.jpg'
 import { ButtonPrimary, ButtonSecondaryWhite } from '../button/Boutons';
+import { Link } from 'react-router-dom';
 
 export function Home () {
     return (
@@ -30,7 +31,8 @@ export function Home () {
                         <a href="#" class="text-sm font-semibold leading-6 text-white">Abonnement</a>
                     </div>
                     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                        <a href="#" class="text-sm font-semibold leading-6 text-white">Se connecter <span aria-hidden="true">&rarr;</span></a>
+                        <Link to="/SeConnecter" class="text-sm font-semibold leading-6 text-white">Se connecter <span aria-hidden="true">&rarr;</span>
+                        </Link>
                     </div>
                 </nav>
                 {/* <!-- Mobile menu, show/hide based on menu open state. --> */}
@@ -74,7 +76,9 @@ export function Home () {
                         <p class="text-lg leading-8 text-white">Application de synthèse vocale Malagasy alimentée par une intelligence artificielle. <br/> Transformer facilement votre texte en une voix naturelle.</p>
                     </div>
                     <div class="flex items-center  gap-x-6">
-                        <ButtonPrimary name='Commencer ici'/>
+                        <Link to="/SeConnecter">
+                            <ButtonPrimary name='Commencer ici'/>
+                        </Link>
                         <ButtonSecondaryWhite name="Plus d'information"/>
                     </div>
                 </div>

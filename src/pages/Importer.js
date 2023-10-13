@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import one from '../image/1.png'
-import NavBar from "./NavBar";
+import NavBar from "./components/NavBar";
 import { ButtonPrimary, ButtonSecondary } from '../button/Boutons';
 
 export default function Importer() {
@@ -20,9 +21,13 @@ export default function Importer() {
                       <input type='file' class="hidden" />
                   </label>
               </div>
-              <div className='flex gap-12'>
-                <ButtonSecondary name='Annuler'/>
-                <ButtonPrimary name='Synthétiser en voix'/>
+              <div className='inlie-flex items-center gap-10'>
+                <Link to="/Accueil">
+                  <ButtonSecondary name='Annuler'/>
+                </Link>
+                <Link to="/Lecture">
+                  <ButtonPrimary name='Synthétiser en voix'/>
+                </Link>
               </div>
             </div>
         </div>

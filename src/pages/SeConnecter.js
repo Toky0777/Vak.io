@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ButtonPrimary } from "../button/Boutons";
 import ispm from "../image/ispm.png";
 import logo from '../image/logoVak.io.png';
@@ -38,7 +39,9 @@ const SeConnecter = () => {
                                     <input class="pl-2 w-full outline-none border-none" type="password" name="password" id="password" placeholder="Mot de passe" />
                         </div>
                     </div>
-                    <ButtonPrimary name='Se connecter'/>
+                    <Link to="/Accueil" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white text-center shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                        Se connecter 
+                    </Link>
                     <div class="flex justify-between mt-4">
                                 <span class="text-sm ml-2 hover:text-blue-500 cursor-pointer hover:-translate-y-1 duration-500 transition-all">Mot de passe oublié ?</span>
                                 <a href="#" class="text-sm ml-2 hover:text-blue-500 cursor-pointer hover:-translate-y-1 duration-500 transition-all">Créer un compte</a>

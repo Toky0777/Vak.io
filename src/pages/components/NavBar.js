@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const NavBar = () => {
     return (
         <> 
@@ -17,30 +19,32 @@ const NavBar = () => {
                         </div>
                         <div id="main-nav" class="w-full flex-grow lg:flex items-center lg:w-auto hidden  ">
                             <div class="text-sm lg:flex-grow mt-2 animated jackinthebox xl:mx-8">
-                                <a href="#home"
-                                    class="block lg:inline-block text-md font-semibold  text-black sm:hover:border-indigo-400  hover:text-orange-500 mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
+                                <Link to="/Accueil"
+                                    class="block lg:inline-block text-md font-semibold  text-white sm:hover:border-indigo-400  hover:text-orange-500 mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
                                     Accueil
-                                </a>
-                                <a href="#home"
+                                </Link>
+                                <Link to="/Importer"
                                     class="block lg:inline-block text-md font-semibold  text-white  sm:hover:border-indigo-400  hover:text-orange-500 mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
                                     Importer
-                                </a>
-                                <a href="#home"
+                                </Link>
+                                <Link to="/Historique"
                                     class="block lg:inline-block text-md font-semibold  text-white  sm:hover:border-indigo-400  hover:text-orange-500 mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
                                     Historique
-                                </a>
-                                <a href="#home"
+                                </Link>
+                                {/* <Link to="/Accueil"
                                     class="block lg:inline-block text-md font-semibold  text-white  sm:hover:border-indigo-400  hover:text-orange-500 mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
                                     A propos
-                                </a>
-                                <a href="#home"
+                                </Link>
+                                <Link to="/Accueil"
                                     class="block lg:inline-block text-md font-semibold  text-white  sm:hover:border-indigo-400  hover:text-orange-500 mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
                                     COMING SOON
-                                </a>
+                                </Link> */}
                             </div>
                         </div>
                         <div class="inline-flex items-center">
-                            <button class="text-md text-white font-semibold hover:text-orange-500">Déconnecter</button>
+                            <Link to="/" class="text-md text-white font-semibold hover:text-orange-500">
+                                Deconnecter
+                            </Link>
                         </div>
                     </nav>
                 </div>

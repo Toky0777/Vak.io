@@ -7,7 +7,6 @@ import Importer from './pages/Importer';
 import Lecture from './pages/Lecture';
 import Historique from './pages/Historique';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Switch } from '@mui/material';
 
 const App = () => {
   return (

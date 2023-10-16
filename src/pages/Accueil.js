@@ -10,7 +10,7 @@ import two from '../image/2.png'
 const Accueil = () => {
     return (
         <>
-        <img class="absolute -z-10 w-full h-[100vh]" src={two} alt=""/>
+        <img className="absolute -z-10 w-full h-[100vh]" src={two} alt=""/>
         <NavBar/>
         <div className="flex w-full justify-center">
             <div className="flex flex-col gap-8 pt-48">
@@ -29,7 +29,7 @@ const Accueil = () => {
                 <div className="inline-flex items-center py-6 px-10 cursor-default shadow-lg rounded-md bg-blue-50 gap-8 justify-center">
                     <button>
                         {/* <AutoFixHighIcon fontSize="large" sx={{ color: "#0073cc" }}/> */}
-                        <img class="h-8" src={mlg} alt=""/>
+                        <img className="h-8" src={mlg} alt=""/>
                     </button>
                     <div className="flex flex-col">
                         <p>Traduction Malagasy</p>

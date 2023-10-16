@@ -45,7 +45,7 @@ export default function Lecture() {
 
   return (
     <>
-        <img class="absolute -z-10 w-full h-[100vh]" src={one} alt=""/>
+        <img className="absolute -z-10 w-full h-[100vh]" src={one} alt=""/>
         <NavBar/>
         <div className="flex w-full justify-center pt-10">
             <div className="flex flex-col items-center pt-6 w-[75vh] cursor-default shadow-lg rounded-md bg-blue-50 gap-4 justify-center p-5">
@@ -69,7 +69,7 @@ export default function Lecture() {
                         <FastForwardIcon color='primary'/>
                     </div>
                     <div>
-                        <img class="h-5 rounded-md" src={mlg} alt=""/>
+                        <img className="h-5 rounded-md" src={mlg} alt=""/>
                     </div>
                 </div>
                 <Link to="/Importer" className='flex justify-end w-full text-blue-500 hover:text-blue-700'>

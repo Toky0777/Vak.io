@@ -8,7 +8,7 @@ import text3 from "../image/text3.jpg";
 export default function Historique() {
   return (
     <>
-    <img class="absolute -z-10 w-full h-[100vh]" src={one} alt=""/>
+    <img className="absolute -z-10 w-full h-[100vh]" src={one} alt=""/>
     <NavBar/>
     <div className='flex justify-center'>
         <div className="flex w-[40%] shadow-lg bg-gray-800 bg-opacity-50 backdrop-blur rounded-md p-10 mt-10">

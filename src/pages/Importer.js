@@ -12,7 +12,7 @@ export default function Importer() {
         <NavBar/>
         <div className="flex w-full justify-center pt-40">
             <div className="flex flex-col items-center py-6 w-[75vh] cursor-default shadow-lg rounded-md bg-blue-50 gap-10 justify-center">
-              <p className='font-semibold'>Importer votre texte</p>  
+              <p className='font-semibold'>Importer votre image ici</p>  
               <ImageUploader></ImageUploader>
               <div className='inlie-flex items-center gap-10'>
                 <Link to="/Accueil">

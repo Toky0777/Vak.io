@@ -1,22 +1,37 @@
 import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 
-function ImageUploader() {
+function ImageUploader(props) {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
 
     if (file) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        setSelectedImage(e.target.result);
-      };
-      reader.readAsDataURL(file);
+      const size = file.size;
+      if (size > 10000000) {
+        // show a sweet alert here
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Image trop volumineuse, veuillez en choisir une autre inférieure à 10 Mo',
+        });
+        setSelectedImage(null);
+      } else {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = (e) => {
+          setSelectedImage(reader.result);
+          file.data = reader.result;
+          props.onImageUpload(file);
+        };
+      }
     }
   };
 
   const handleClose = () => {
     setSelectedImage(null);
+    props.onImageUpload(null);
   }
 
   return (

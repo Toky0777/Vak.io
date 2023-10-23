@@ -12,11 +12,16 @@ import VolumeOffIcon from '@mui/icons-material/VolumeOff';
 import VolumeDownIcon from '@mui/icons-material/VolumeDown';
 import mlg from '../image/drapeau.png'
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 
-export default function Lecture() {
+
+export default function Lecture(props) {
+  const location = useLocation();
   const [progress, setProgress] = React.useState(0);
   const [buffer, setBuffer] = React.useState(10);
+  console.log('LOGADYTIOPO', location)
+  const dataReceived = location.state.data;
 
   const progressRef = React.useRef(() => {});
   React.useEffect(() => {
@@ -49,12 +54,8 @@ export default function Lecture() {
         <NavBar/>
         <div className="flex w-full justify-center pt-10">
             <div className="flex flex-col items-center pt-6 w-[75vh] cursor-default shadow-lg rounded-md bg-blue-50 gap-4 justify-center p-5">
-                <p className='p-4 bg-slate-200 rounded'>"Vak.io" est une application web innovante qui combine la puissance de la vision par ordinateur, de la traduction multilingue, 
-                de la synthèse vocale naturelle et de la mesure du temps de lecture pour offrir une expérience utilisateur unique. <mark className='bg-blue-300'>Son principal objectif est de simplifier la conversion d'images
-                 en texte,</mark> la traduction de ce texte vers différentes langues, et la restitution vocale fluide. <br/><br/>
-                 L'une des fonctionnalités distinctives de Vak.io est sa capacité à traduire du texte en malgache, élargissant ainsi son utilité pour un public plus diversifié. 
-                 Les utilisateurs peuvent télécharger une image contenant du texte, et Vak.io la détectera automatiquement, la convertira en texte lisible, puis proposera une gamme de langues dans lesquelles le texte peut être traduit. 
-                 De plus, les utilisateurs peuvent écouter le texte traduit en utilisant une voix naturelle.
+                <p className='p-4 bg-slate-200 rounded'> 
+                  {dataReceived}
                 </p>
                 <Box sx={{ width: '90%' }} className="pt-5">
                     <LinearProgress variant="buffer" value={progress} valueBuffer={buffer} />
